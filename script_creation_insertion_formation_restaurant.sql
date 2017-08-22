@@ -33,7 +33,7 @@ alter table ingredient_plat
 add constraint fk_ingrPlat_idIngr foreign key(idIngredient) references ingredient(idIngredient),
 add constraint fk_ingPlat_idPlat foreign key(idPlat) references plat(idPlat);
 insert into ingredient(nomIngredient) values("poivron"),("piment"),("oignon"),("boeuf"),("poulet"),("oueuf"),("tortilla");
-insert into plat(nomPlat,prix) values("boeuf au oignon",5.50),("chili",6.80),("tacos",8);
+insert into plat(nomPlat,prix) values("boeuf au oignon",5.50),("chili",6.80),("tacos",8.00);
 insert into commande(total,date) values(12.3,sysdate()),(14.80,sysdate()),(24.00,sysdate());
 insert into plat_commande(idcommande,idplat) values(1,1),(1,2),(2,2),(2,3),(3,3),(3,3),(3,3);
 insert into ingredient_plat(idingredient,idplat) values(3,1),(4,1),(1,2),(2,2),(3,2),(4,2),(1,3),(2,3),(3,3),(5,3),(6,3);
